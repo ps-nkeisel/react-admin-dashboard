@@ -1,0 +1,33 @@
+@import "./sidebar.scss";
+@import "./table.scss";
+@import "./modal.scss";
+
+.spam-highlight {
+    background: #FACC2B;
+    color: #000;
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+}
+
+.well, pre, xmp {
+    background-color: #fcfcfc;
+    border-color: #dee5e7;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}

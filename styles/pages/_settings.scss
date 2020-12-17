@@ -1,0 +1,60 @@
+.sett-modal {
+    .modal-header {
+        padding-bottom: 0;
+    }
+
+    .modal-dialog {
+        max-width: 795px;
+        min-height: 0;
+    }
+
+    .vu-advanced-settings {
+        &__table {
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: 0.02em;
+            border-top: 1px solid $color-ui-02;
+
+            thead {
+                th {
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 13px;
+                    padding: 12px 14px;
+                    border-top: 0;
+                    color: $color-text-05;
+                    text-transform: uppercase;
+                }
+            }
+
+            tbody {
+                tr {
+                    border: 1px solid $color-ui-02;
+                    border-left: 0;
+                    border-right: 0;
+                    
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    
+                    td {
+                        font-size: 13px;
+                        
+                    }
+                    
+                    &:nth-child(odd) {
+                        background-color: $color-ui-07;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-link {
+        color: $green-100;
+        
+        &:hover {
+            color: $color-brand-01;
+        }
+    }
+}

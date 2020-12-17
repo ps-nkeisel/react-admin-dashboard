@@ -1,0 +1,37 @@
+.platform {
+    &__icon {
+        height: 40px;
+        width: 40px !important;
+        margin-right: 15px;
+    }
+
+    &__button {
+        border: none;
+        padding: 26px 24px;
+        background-color: $white;
+
+        &:focus {
+            outline: none;
+        }
+
+        &--current {
+            background-color: $color-ui-08;
+            color: $white;
+        }
+    }
+
+    &__item + &__item {
+        margin-left: 12px;
+    }
+
+    &__button {
+        @include media-breakpoint-down(md) {
+            width: 100%
+          }
+    }
+    &__item {
+        @include media-breakpoint-down(md) {
+            width: 100%
+          }
+    }
+}

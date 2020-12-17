@@ -1,0 +1,13 @@
+div[role='tablist'] {
+    span[role='tab'] {
+        transition: color 0.3s ease-in-out;
+        @include hover-focus() {
+            color: $color-brand-01;
+        }
+
+        &[aria-disabled='true'] {
+            color: $color-text-08 !important;
+            opacity: 1;
+        }
+    }
+}

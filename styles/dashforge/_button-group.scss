@@ -1,0 +1,31 @@
+
+.button-group {
+  display: flex;
+  align-items: stretch;
+  height: $height-base;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    font-size: inherit;
+    font-weight: inherit;
+
+    + .btn { margin-left: 5px; }
+  }
+}
+
+
+.btn-outline-primary,
+.btn {
+  font-weight: 500;
+}
+
+.btn-outline-primary {
+  border-color: #E5E9F2;
+
+  &:hover {
+    color: #3A84FF;
+    background-color: #fff;
+    border-color: #3A84FF;
+  }
+}

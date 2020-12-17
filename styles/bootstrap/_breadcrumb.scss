@@ -1,0 +1,53 @@
+
+.breadcrumb {
+  background-color: $color-ui-02;
+}
+
+.breadcrumb-style1,
+.breadcrumb-style2,
+.breadcrumb-style3 {
+  @include border-radius(0);
+  background-color: transparent;
+  padding: 0;
+
+  .breadcrumb-item {
+    font-size: 11px;
+    font-family: $font-family-system;
+    letter-spacing: .5px;
+
+    a {
+      color: $color-text-05;
+      @include hover-focus() { color: $color-brand-01; }
+    }
+
+    &.active {
+      color: $color-text-05;
+    }
+  }
+}
+
+.breadcrumb {
+  &-style1 &-item + &-item { 
+    &::before {
+      content: '>';
+      color: $color-text-05;
+    }
+  }
+}
+
+.breadcrumb-style2,
+.breadcrumb-style3 {
+  .breadcrumb-item + .breadcrumb-item::before {
+    width: 16px;
+    text-align: center;
+    font-family: 'Ionicons';
+  }
+}
+
+.breadcrumb-style2 {
+  .breadcrumb-item + .breadcrumb-item::before { content: '\f3d1'; }
+}
+
+.breadcrumb-style3 {
+  .breadcrumb-item + .breadcrumb-item::before { content: '\f287'; }
+}

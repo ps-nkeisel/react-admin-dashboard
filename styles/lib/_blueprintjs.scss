@@ -1,0 +1,212 @@
+@import "../variables";
+
+.bp3 {
+  &-switch {
+    &:not(:last-child) {
+      margin-bottom: 1.55rem;
+    }
+
+    .bp3-control-indicator {
+      height: 1.625rem;
+      width: 2.875rem !important;
+      border: 1px solid $color-brand-05 !important;
+
+      &::before {
+        width: 1.375rem !important;
+        height: 1.375rem !important;
+        box-shadow: none !important;
+        margin: 1px !important;
+      }
+    }
+
+    input {
+      &:not(:checked) ~ .bp3-control-indicator {
+        background-color: transparent !important;
+
+        &::before {
+          background-color: $color-brand-05;
+        }
+      }
+      
+      &:checked ~ .bp3-control-indicator {
+        background-color: $color-brand-01 !important;
+
+        &::before {
+          left: calc(100% - 1.5rem) !important;
+        }
+      }
+    }
+  }
+  
+  &-popover-arrow {
+    display: none;
+  }
+  
+  &-popover {
+    box-shadow: none;
+    border: 1px solid $color-brand-05;
+  }
+
+  &-menu {
+    padding: 15px 10px;
+  }
+
+  &-menu-item {
+    > * {
+      margin-right: 20px;
+      width: 18px !important;
+    }
+  }
+
+  &-button-group.bp3-minimal &-button,
+  &-button-group.bp3-minimal &-button.bp3-disabled {
+    background-color: $white;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  &-button-group.bp3-minimal &-button.bp3-disabled {
+    color: $color-text-08;
+
+    &:hover {
+      background-color: $white;
+      color: $color-text-08;
+    }
+  }
+
+  &-button {    
+    &.bp3-intent-primary {
+      background-color: $color-text-06;
+      box-shadow: none;
+      border: 0;
+      padding-top: 15px;
+      padding-bottom: 14px;
+      transition:
+        color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+        background-color: #1167F5;
+      }
+    }
+
+    &.bp3-intent-alert,
+    &.bp3-intent-yellow {
+      background-color: $color-ui-14;
+      box-shadow: none;
+      border: 0;
+      padding-top: 15px;
+      padding-bottom: 14px;
+      color: $white;
+      transition:
+        color 0.3s ease-in-out,
+        background-color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: none;
+        background-color: rgba($color-ui-14, 0.7);
+      }
+    }
+
+    &.bp3-intent-warning {
+      border: 0;
+      box-shadow: none;
+      background-color: #ffc107;
+
+      &:hover {
+        box-shadow: none;
+        background-color: #FFAF1D;
+      }
+    }
+
+    &.bp3-intent-alert {
+      background-color: $red;
+
+      &:hover {
+        background-color: darken($red, 10);
+      }
+    }
+  }
+
+  &-label {
+    color: $color-text-05;
+    font-weight: $font-weight-medium;
+  }
+
+  .form-group &-label {
+    margin-bottom: 13px;
+  }
+
+  &-control-group {
+    max-width: 196px;
+  }
+
+  &-input {
+    border: 1px solid $color-ui-05;
+    box-shadow: none;
+    color: rgba($color-text-05, 0.7);
+    font-size: 12px;
+    background-color: transparent;
+    outline: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.nav {
+  .bp3 {
+    &-popover {
+      &-wrapper {
+        min-width: 155px;
+        display: block;
+        margin-left: 19px;
+      }
+    }
+  }
+}
+
+.date-range {
+  .bp3 {
+    &-input {
+      text-align: center;
+    }
+
+    &-input-group {
+      flex-grow: 1 !important;
+      flex-shrink: 1 !important;
+      
+      &:first-child {
+        position: relative;
+        
+        &::after {
+          content: '–';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(50%, -50%);
+          z-index: 3;
+          color: rgba($color-text-05, 0.7);
+        }
+        
+        input {
+          border-right: none;
+          padding-right: 3px !important;
+        }
+      }
+      
+      &:last-child {
+        input {
+          border-left: none;
+          padding-left: 1px;
+          padding-right: 0;
+        }
+      }
+    }
+    
+  }
+}

@@ -1,0 +1,35 @@
+.stat-item {
+  @include media-breakpoint-up(lg) {
+    max-width: 234px;
+  }
+}
+.stat-sign {
+    border-radius: 50%;
+    width: 36px !important;
+    height: 36px;
+    overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    &__wrapper {
+      max-width: calc(100% - 36px - 15px);
+    }
+  }
+
+  &__icon {
+    color: $white;
+    padding: 6px;
+    height: 100%;
+    width: 100% !important;
+  }  
+}
+
+.alert {
+  padding: 10px 15px;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #dee5e7;
+}

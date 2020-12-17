@@ -1,0 +1,17 @@
+@import "../bootstrap/mixins";
+
+.col {
+  @include media-breakpoint-up(lg) {
+    &-lg {
+      &-2\.4 {
+        flex-basis: 20%;
+        max-width: 20%;
+      }
+  
+      &-9\.6 {
+          flex-basis: 80%;
+          max-width: 80%;
+      }
+    }
+  }
+}

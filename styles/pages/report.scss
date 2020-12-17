@@ -1,0 +1,196 @@
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.vu-reports-table {
+  .vu-reports-table__select-wrapper {
+    width: 100%;
+    max-width: 100%;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 12px;
+
+      .custom-select {
+        height: 45px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 245px;
+    }
+  }
+
+  .vu-users-table__cell-inner {
+    .btn {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      min-width: 159px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.vu-users-table {
+  &__row {
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E9F2;
+  }
+
+  &__top {
+    position: relative;
+    padding: 16px 50px 16px 10px;
+    background-color: #fff;
+
+    @include media-breakpoint-up(md) {
+      padding: 16px 14px;
+    }
+  }
+
+  &__header {
+    padding: 12px 14px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+
+    @include media-breakpoint-down(md) {
+      .vu-users-table {
+        &__pages,
+        &__options {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__pages {
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+    }
+  }
+
+  &__options {
+    right: 10px;
+    bottom: 8px;
+    position: absolute;
+
+    @include media-breakpoint-up(md) {
+      position: static;
+      min-width: 170px;
+    }
+  }
+
+  &__pages,
+  &__options {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__cell-inner {
+    padding: 12px 0;
+    border-top: 1px solid #E5E9F2;
+
+    @include media-breakpoint-up(md) {
+      padding: 24px 14px;
+    }
+  }
+
+  &__cell-form-wrapper {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      max-width: 385px;
+    }
+  }
+
+  &__cell-inner-bw {
+    @include media-breakpoint-down(sm) {
+      width: calc(50% - 5px);
+    }
+  }
+
+  .btn {
+    font-size: 13px;
+    border: 0;  
+
+    &.btn-edit {
+      padding: 6px 0;
+      color: #8192A4;
+      margin-right: 24px;
+    }
+
+    &.btn-delete {
+      padding: 6px 0;
+      color: #EB5757;
+    }
+  }
+
+  .btn-warning,
+  .btn-primary {
+    min-width: 159px;
+  }
+
+  .permission-checkboxes {
+    width: calc(100% - 140px);
+    background-color: transparent !important;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .bp3-switch input:not(:checked) ~ .bp3-control-indicator {
+    background-color: #fff !important;
+  }
+
+  &__modal {
+    .modal-dialog {
+      max-width: 427px;
+    }
+  }
+}
+
+.vu-filter-label, .vu-moderatoremail-block {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 160px;
+}
+
+.vu-filter-label {
+  cursor: default;
+  float: right;
+  font-size: 13px;
+  color: rgb(129, 146, 164);
+  border-width: 0px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: rgba(129, 146, 164, 0.1);
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  .fa-times {
+    left: 2px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 22px;
+  }
+}
+
+.vu-reports {
+  &__add-container {
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 385px;
+    }
+  }
+}

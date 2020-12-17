@@ -1,0 +1,105 @@
+.jvectormap {
+    &-container {
+        overflow: visible;
+        position: static;
+    }
+
+    &-legend {
+        background-color: transparent;
+        padding: 0 !important;
+        margin: 0 !important;
+        
+        &-cnt-h {
+            right: auto;
+            left: 68px;
+            bottom: 20px;
+            right: 68px;
+
+            @include media-breakpoint-down(sm) {
+                left: 10px;
+                right: 10px;
+            }
+        }
+
+        &-inner {
+            margin-left: -35px;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include media-breakpoint-down(md) {
+                margin-left: -10px;
+            }
+        }
+        
+        &-tick {
+            display: flex;
+            align-items: center;
+            width: auto !important;
+            padding-left: 35px;
+
+            @include media-breakpoint-down(md) {
+                flex: 0 0 25%;
+                max-width: 25%;
+                margin-bottom: 12px;
+                padding-left: 10px;
+            }
+        }
+
+        &-tick-sample {
+            height: 20px !important;
+            width: 20px !important;
+            border-radius: 5px;
+            margin-right: 12px;
+        }
+        
+        &-tick-text {
+            color: $color-text-05;
+        }
+    }
+
+    &-zoomin,
+    &-zoomout {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        background-color: transparent;
+        border: 1px solid $color-text-08;
+        color: $color-text-06;
+        font-size: 0;
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 900;
+        left: 20px;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        &::before {
+            font-size: 0.9rem;
+        }
+    }
+
+    &-zoomin {
+        top: 20px;
+
+        &::before {
+            content: '\f067';
+        }
+    }
+
+    &-zoomout {
+        top: 54px;
+
+        &::before {
+            content: '\f068';
+        }
+    }
+}
+
+.map {
+    @include media-breakpoint-down(md) {
+        height: 75vw !important;
+        padding-bottom: 70px !important;
+        padding-top: 0 !important;
+    }
+}

@@ -1,0 +1,80 @@
+image: node:10.15.3
+definitions:
+  caches:
+    nextcache: .next/cache
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: "Sentry Release"
+          image: getsentry/sentry-cli
+          script:
+            - sentry-cli releases -o "${SENTRY_ORG}" new -p "${SENTRY_PROJECT}" "${BITBUCKET_BUILD_NUMBER}"
+            - sentry-cli releases -o "${SENTRY_ORG}" set-commits --auto "${BITBUCKET_BUILD_NUMBER}"
+      - step:
+          name: "Create a static export"
+          caches:
+            - node
+            - nextcache
+          script:
+            - npm install
+            # Create a build
+            - npm run build
+            # Create a static export
+            - npm run export
+          artifacts:
+            - out/**
+      - step:
+          name: "Deploy to Production"
+          script:
+            # Downloading the Google Cloud SDK
+            - curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-281.0.0-linux-x86_64.tar.gz
+            - tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/
+            - /tmp/google-cloud-sdk/install.sh -q
+            - source /tmp/google-cloud-sdk/path.bash.inc
+            # Authenticating with the service account key file
+            - echo $GCLOUD_API_KEYFILE | base64 --decode --ignore-garbage > ./gcloud-api-key.json
+            - gcloud auth activate-service-account --key-file gcloud-api-key.json
+            # Deploy build folder to the bucket configured in pipelines variables
+            # -m use faster multithreaded uploads
+            # -d delete remote files that aren't in the source
+            # -r recurse into source subdirectories
+            - gsutil -m rsync -d -r ./out $GCLOUD_PROJECT
+      - step:
+           name: "Sentry Finalize Release & Deploy"
+           deployment: production
+           image: getsentry/sentry-cli
+           script:
+             - sentry-cli releases -o "${SENTRY_ORG}" finalize "${BITBUCKET_BUILD_NUMBER}"
+             - sentry-cli releases -o "${SENTRY_ORG}" deploys "${BITBUCKET_BUILD_NUMBER}" new -e "production"
+    develop:
+      - step:
+          name: "Create a static export"
+          caches:
+            - node
+            - nextcache
+          script:
+            - npm install
+            # Create a build
+            - npm run build:dev
+            # Create a static export
+            - npm run export
+          artifacts:
+            - out/**
+      - step:
+          name: "Deploy to Development"
+          script:
+            # Downloading the Google Cloud SDK
+            - curl -o /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-281.0.0-linux-x86_64.tar.gz
+            - tar -xvf /tmp/google-cloud-sdk.tar.gz -C /tmp/
+            - /tmp/google-cloud-sdk/install.sh -q
+            - source /tmp/google-cloud-sdk/path.bash.inc
+            # Authenticating with the service account key file
+            - echo $GCLOUD_API_KEYFILE | base64 --decode --ignore-garbage > ./gcloud-api-key.json
+            - gcloud auth activate-service-account --key-file gcloud-api-key.json
+            # Deploy build folder to the bucket configured in pipelines variables
+            # -m use faster multithreaded uploads
+            # -d delete remote files that aren't in the source
+            # -r recurse into source subdirectories
+            - gsutil -m rsync -d -r ./out $GCLOUD_DEV_PROJECT

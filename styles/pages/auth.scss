@@ -1,0 +1,30 @@
+
+/*
+ * Dashforge Auth Pages (Signin, Signup, etc.)
+ *
+ * This style is use in auth pages.
+ *
+ */
+
+.media-body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+
+.content-auth {
+  .container {
+    max-width: 1470px;
+  }
+}
+
+.sign-wrapper {
+  max-width: 587px;
+}
+
+.auth-media {
+  svg {
+    max-width: 767px;
+  }
+}

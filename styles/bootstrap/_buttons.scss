@@ -1,0 +1,289 @@
+
+
+.btn {
+  font-size: inherit;
+
+  &:focus,
+  &:active { box-shadow: none; }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    stroke-width: 2.5px;
+    margin-top: -2px;
+  }
+
+  &.active-primary {
+    &,&:hover,&:focus {
+      background-color: #fff;
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+
+  &-primary {
+    padding: 10px 25px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    border: none;
+
+    @include hover-focus() {
+      background-color: #1167F5;
+      border-color: #1167F5;
+    }
+
+    &:disabled {
+      background-color: $color-brand-05;
+      border-color: $color-brand-05;
+      cursor: not-allowed;
+    }
+  }
+
+  &-fill {
+    display: block;
+    width: 100%;
+  }
+
+  &-red {
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+
+    @include hover-focus() {
+      color: $white;
+      background-color: darken($red, 10%);
+      border-color: darken($red, 10%);
+    }
+  }
+
+  &-bordered {
+    &-brand-01 {
+      border: 1px solid $color-brand-05;
+      color: $color-brand-01;
+
+      &:focus,
+      &:hover {
+        border-color: $color-brand-01;
+        color: $color-brand-01;
+      }
+    }
+  }
+}
+
+.btn-sm {
+  font-size: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--square {
+    width: 30px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.btn-xs {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  @include border-radius();
+}
+
+.btn-lg {
+  font-size: $font-size-base;
+  @include border-radius();
+}
+
+.btn-light {
+  background-color: $color-ui-02;
+  border-color: darken($color-ui-02, 7%);
+  color: $color-text-03;
+
+  @include hover-focus() {
+    background-color: $color-ui-02;
+    border-color: darken($color-ui-02, 7%);
+  }
+}
+
+.btn-outline-light {
+  border-color: $gray-400;
+  color: $gray-600;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .btn-outline-light.dropdown-toggle {
+  background-color: $gray-300;
+  border-color: $gray-400;
+}
+
+// White button variant
+.btn-white {
+  background-color: #fff;
+  border-color: $color-ui-03;
+  color: rgba($color-text-02, .7);
+
+  @include hover-focus() {
+    border-color: $color-ui-04;
+    color: $color-text-02;
+  }
+
+  &:active,
+  &.active {
+    background-color: $color-ui-01;
+  }
+}
+
+// Icon only button variant
+.btn-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &.btn-sm {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &.btn-xs {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  svg { margin: 0; }
+}
+
+// Brand buttons
+.btn-brand-01 {
+  background-color: darken($color-brand-01, 5%);
+  border-color: darken($color-brand-01, 5%);
+  color: #fff;
+
+  @include hover-focus() {
+    background-color: darken($color-brand-01, 10%);
+    border-color: darken($color-brand-01, 10%);
+    color: #fff;
+  }
+}
+
+.btn-brand-02 {
+  background-color: $color-brand-02;
+  border-color: $color-brand-02;
+  color: #fff;
+
+  @include hover-focus() {
+    background-color: lighten($color-brand-02, 15%);
+    border-color: lighten($color-brand-02, 15%);
+    color: #fff;
+  }
+}
+
+.btn-ui-05 {
+  background-color: transparent;
+  border: 1px solid $color-ui-05;
+
+  @include hover-focus() {
+    background-color: $color-brand-01;
+    color: $white !important;
+  }
+}
+
+.btn-outline-facebook {
+  background-color: transparent;
+  border-color: #4064ac;
+  color: #4064ac;
+
+  @include hover-focus() {
+    background-color: #4064ac;
+    border-color: #4064ac;
+    color: #fff;
+  }
+}
+
+.btn-outline-twitter {
+  background-color: transparent;
+  border-color: #00a7e6;
+  color: #00a7e6;
+
+  @include hover-focus() {
+    background-color: #00a7e6;
+    border-color: #00a7e6;
+    color: #fff;
+  }
+}
+
+.btn-outline-google {
+  padding: 13px 5px 13px;
+  background-color: transparent !important;
+  border: 1px solid $color-brand-01;
+  color: $color-brand-01 !important;
+  width: 100%;
+  box-shadow: none !important;
+  background-image: none !important;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @include hover-focus() {
+    background-color: $color-brand-01 !important;
+    border-color: $color-brand-01;
+    color: $white !important;
+  }
+}
+
+// Uppercase button variant
+.btn-uppercase {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: $font-weight-semibold;
+  letter-spacing: .5px;
+  line-height: 1.75;
+
+  &.btn-sm {
+    font-size: 11px;
+    line-height: 1.773;
+  }
+
+  &.btn-xs {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+}
+
+.vu-export-excel-btn {
+  display: flex;
+  font-size: 12px;
+  padding: 5px 9px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+
+  @include media-breakpoint-down(md) {
+    padding: 9px;
+  }
+
+  svg {
+    margin: 0;
+
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    svg {
+      width: 14px;
+      height: 18px;
+    }
+  }
+}

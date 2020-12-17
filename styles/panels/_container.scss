@@ -1,0 +1,70 @@
+.shifted-panel-buttons {
+    .panel-buttons {
+        margin-bottom: -85px;
+    }
+}
+
+.panel-button {
+    width: 30px !important;
+    height: 30px;
+    background-color: $white;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px;
+    border: 1px solid $color-brand-05;
+
+    @include media-breakpoint-down(md) {
+        width: 42px !important;
+        height: 42px;
+        padding: 9px;
+    }
+}
+
+.rdt_Table {
+    &Col {
+        > div > div {
+            white-space: nowrap;
+        }
+    }
+
+    .custom-first-cell &Cell {
+        &:first-child {
+            color: $color-text-05;
+        }
+    }
+
+    &Col_Sortable {
+        position: relative;
+
+        div {
+            color: $color-text-05;
+        }
+
+        span {
+            position: absolute !important;
+            right: -16px;
+            top: 12px;
+            color: $color-text-05;
+
+            &.__rdt_custom_sort_icon__ {
+                svg.svg-inline--fa {
+                    height: 12px !important;
+                    width: 12px !important;
+                }
+            }
+        }
+    }
+
+    &Row {
+        color: $color-text-07;
+        
+        &:not(:last-child) {
+            border-bottom-color: $color-ui-02 !important;
+        }
+        
+        &:nth-child(odd) {
+            color: $color-text-07;
+            background-color: $color-ui-07 !important;
+        }
+    }
+}

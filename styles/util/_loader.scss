@@ -1,0 +1,47 @@
+
+.loader {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    &__list {
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+    
+    &__item {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        border-radius: 50%;
+        animation: spin 2s ease infinite;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:first-child{
+            background: $color-ui-11;
+            animation-delay: -1.5s;
+        }
+        &:nth-child(2){
+            background: $color-ui-08;
+            animation-delay: -1s;
+        }
+        &:nth-child(3){
+            background: $color-ui-14;
+            animation-delay: -0.5s;
+        }
+        &:last-child{
+            background: $color-ui-09;
+        }
+    }
+}
+
+@keyframes spin {
+    0%,100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
+}

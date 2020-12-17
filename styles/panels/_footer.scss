@@ -1,0 +1,29 @@
+
+.footer {
+  font-size: 10px;
+  font-family: $font-family-system;
+  letter-spacing: .3px;
+  padding: 15px 25px;
+  background-color: $white;
+  color: darken($color-text-03, 12%);
+  text-transform: uppercase;
+  border-left: 1px solid $color-ui-06;
+
+  @include media-breakpoint-down(lg) {
+    padding: 10px 30px;
+  }
+
+  a {
+    padding: 0;
+    color: $color-text-06;
+
+    @include hover-focus() { color: $color-brand-01; }
+
+    + .nav-link { margin-left: 25px; }
+  }
+
+  > div:last-child {
+    margin-top: 15px;
+    @include media-breakpoint-up(sm) { margin-top: 0; }
+  }
+}

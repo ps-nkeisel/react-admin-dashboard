@@ -1,0 +1,206 @@
+.sett-list {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 991px)  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .vu-settings-body {
+    input {
+      &::placeholder {
+        color: #E5E9F2;
+      }
+    }
+  }
+  
+  .vu-advanced-settings {
+    .form-control {
+      margin-top: 0;
+    }
+  
+    .bp3-label {
+      margin-bottom: 4px;
+    }
+  
+    &__row {
+      input {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+  
+    &__toggle {
+      color: #8192A4;
+      font-weight: 500;
+      text-align: center;
+  
+      .svg-inline--fa {
+        top: 1px;
+        position: relative;
+        margin-right: 5px;
+      }
+    }
+  
+    .btn {
+      // padding: 11px 25px;
+      line-height: 21px;
+      letter-spacing: 0.2px;
+    }
+  
+    .search-input {
+      &::placeholder {
+        color: #8192A4;
+      }
+    }
+  
+    &__table {
+      font-size: 13px;
+      line-height: 17px;
+      letter-spacing: 0.02em;
+  
+      thead {
+        th {
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 13px;
+          padding: 12px 14px;
+          border-top: 0;
+          color: #8192A4;
+          text-transform: uppercase;
+        }
+      }
+  
+      .btn-link {
+        color: #8192A4;
+  
+        &:hover {
+          color: #3A84FF;
+        }
+      }
+    }
+  }
+  
+  
+  @media (min-width: 992px) {
+    .permission-checkboxes {
+      &__item {
+        width: 100%;
+        max-width: 220px;
+      }
+    }
+  
+    .vu-advanced-settings {
+      &__row {
+        input {
+          max-width: 386px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1440px) {
+    .vu-users-table {
+  
+      .vu-filter-label {
+        margin-right: 4px;
+        margin-bottom: 4px;
+      }
+  
+      .permission-checkboxes {
+        width: 100%;
+      }
+  
+      &__pages {
+        flex-wrap: wrap;
+      }
+  
+      &__options {
+        position: static;
+        justify-content: flex-end;
+      }
+
+      .btn.btn-edit {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .vu-users-table {
+      margin-left: -10px;
+      margin-right: -10px;
+  
+      &__pages {
+        margin-top: 12px;
+        margin-left: 0;
+        justify-content: flex-start;
+      }
+  
+      &__row {
+        padding: 0 10px;
+      }
+  
+      &__header {
+        padding: 5px 14px;
+        align-items: center;
+  
+        .vu-users-table__pages {
+          display: none;
+        }
+      }
+  
+      &__top {
+        padding: 16px 0;
+        position: relative;
+        flex-direction: column;
+      }
+  
+      &__cell-inner {
+        padding: 24px 0;
+      }
+  
+      .btn.btn-warning {
+        font-size: 14px;
+      }
+  
+      .btn.btn-warning {
+        width: calc(50% - 5px);
+      }
+  
+      .btn.btn-delete {
+        &:hover,
+        &:focus {
+          background-color: darken(#EB5757, 10);
+        }
+      }
+  
+      .permission-checkboxes {
+        width: 100%;
+      }
+    }
+  
+  
+  
+    .vu-advanced-settings {
+      .bp3-control.bp3-switch:not(.bp3-align-right) {
+        margin-bottom: 24px;
+      }
+  
+      .search-input {
+        height: 42px;
+        width: 100%;
+        max-width: 100%;
+      }
+  
+      &__toggle {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+      }
+    }
+  }
+}

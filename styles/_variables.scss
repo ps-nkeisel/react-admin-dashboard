@@ -1,0 +1,66 @@
+
+// Brand Colors
+$color-brand-01:                  #3A84FF;
+$color-brand-02:                  #042893;
+$color-brand-03:                  #1ce1ac;
+//new
+$color-brand-04:                  #3A84FF;
+$color-brand-05:                  #e5e9f2;
+$color-brand-06:                  #FACC2B;
+
+// Inverse Colors
+$color-inverse-01:                #001737;
+$color-inverse-02:                #1b2e4b;
+
+// Text Colors
+$color-text-01:                   $color-inverse-01;
+$color-text-02:                   $color-inverse-02;
+$color-text-03:                   #8392a5;
+$color-text-04:                   #c0ccda;
+//new
+$color-text-05:                   #8192A4;
+$color-text-06:                   #3A84FF;
+$color-text-07:                   #001736;
+$color-text-08:                   #e5e9f2;
+
+// UI Colors
+$color-ui-01:                     #f5f6fa;
+$color-ui-02:                     #e5e9f2;
+$color-ui-03:                     #c0ccda;
+$color-ui-04:                     #8392a5;
+$color-ui-05:                     #E5E9F2;
+$color-ui-06:                     #f5f7fa;
+$color-ui-07:                     #F9FBFE;
+$color-ui-08:                     #3A84FF;
+$color-ui-09:                     #66E0E0;
+$color-ui-10:                     #FF76B9;
+$color-ui-11:                     #D677EA;
+$color-ui-12:                     #FFC863;
+$color-ui-13:                     #FF9684;
+$color-ui-14:                     #FEC107;
+$color-ui-15:                     #56CCF2;
+$color-ui-16:                     #A7B3BF;
+
+// Height
+$height-base:                     38px;
+$height-header:                   60px;
+$height-header-mobile:            55px;
+$height-footer:                   46px;
+
+// Width
+$width-sidebar:                   267px;
+
+// Marker
+$marker-icon-size:                16px;
+
+// Fonts
+$font-family-roboto:              "Roboto", sans-serif;
+$font-family-interui:             "Inter UI", sans-serif;
+$font-family-lato:                "Lato", sans-serif;
+$font-family-rubik:               "Rubik", sans-serif;
+// $font-family-system:              'IBM Plex Sans';
+$font-family-system:              'Source Sans Pro';
+
+$font-weight-medium:              500;
+$font-weight-semibold:            600;
+$font-weight-bold:                700;
