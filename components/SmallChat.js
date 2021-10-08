@@ -22,11 +22,11 @@ export const loadSmallChat = () => {
             "launcher_pos": "right",
             "launcher_prompt": "Send a message",
             "launcher_type": "icon",
-            "messenger_blank": "Send a message or email us at support@vuukle.com",
+            "messenger_blank": "Send a message or email us at support@admin.com",
             "messenger_entry": "Send a message...",
             "messenger_prompt": "How can we help you?",
             "name_field_label": "Name",
-            "offline_greeting": "We’re offline right now but feel free to email us on support@vuukle.com",
+            "offline_greeting": "We’re offline right now but feel free to email us on support@admin.com",
             "submit_label": "Done",
             "text_color": "#ffffff"
         },
@@ -39,7 +39,7 @@ export const loadSmallChat = () => {
             "hide_offline": false,
             "hide_urls": [{
                 "type": "2",
-                "url": "https://docs.vuukle.com/privacy-and-policy/"
+                "url": "https://docs.admin.com/privacy-and-policy/"
             }, {
                 "type": "1",
                 "url": "/login"

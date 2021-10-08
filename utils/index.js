@@ -9,10 +9,10 @@ const cookieOptions =
 
 if (
   global.location &&
-  global.location.href.indexOf("vuukle.com") !== -1 &&
+  global.location.href.indexOf("admin.com") !== -1 &&
   process.env.NODE_ENV !== "development"
 ) {
-  cookieOptions.domain = ".vuukle.com";
+  cookieOptions.domain = ".admin.com";
 }
 
 export const hashCode = str => {

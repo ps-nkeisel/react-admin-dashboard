@@ -31,7 +31,7 @@ module.exports = withPlugins(
   {
     // Read more at: https://nextjs.org/docs/api-reference/next.config.js/exportPathMap
     exportTrailingSlash: true,
-    generateBuildId: () => "vuukle-dashboard",
+    generateBuildId: () => "admin-dashboard",
     exportPathMap: async function(
       defaultPathMap,
       { dev, dir, outDir, distDir, buildId }
@@ -60,8 +60,8 @@ module.exports = withPlugins(
       VERSION: process.env.VERSION,
       API_BASE_URL:
         process.env.ENV === "production"
-          ? "https://api.vuukle.com/"
-          : "https://apitest.vuukle.com/"
+          ? "https://api.admin.com/"
+          : "https://apitest.admin.com/"
     },
     webpack(config, options) {
       // Add @ alias

@@ -65,7 +65,7 @@ const EmailConfirmationScene = () => {
             <img src="/static/images/email-invalid.svg" />
             <h6 className="tx-color-07 mb-4 tx-14">
               Validation error, please try again. If this error persists, please
-              contact the <a href="mailto:support@vuukle.com">support</a>
+              contact the <a href="mailto:support@admin.com">support</a>
             </h6>
           </>
         );
@@ -94,7 +94,7 @@ const EmailConfirmationScene = () => {
             <Link href="/login" prefetch={false}>
               <span>Back to Log In</span>
             </Link>
-            <a href="mailto:support@vuukle.com">
+            <a href="mailto:support@admin.com">
               <span>Support</span>
             </a>
           </div>

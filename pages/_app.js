@@ -36,7 +36,7 @@ class MyApp extends App {
     return (
       <Provider store={reduxStore}>
         <Head>
-          <title>Vuukle Dashboard</title>
+          <title>Admin Dashboard</title>
         </Head>
         <Component {...pageProps} />
       </Provider>

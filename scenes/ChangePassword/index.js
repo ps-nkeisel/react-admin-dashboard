@@ -83,7 +83,7 @@ const RecoverPassword = () => {
             <a href="/" className="d-inline-block auth-logo small-logo">
               <img
                 src="/static/images/logo.svg"
-                alt="Vuukle Logo"
+                alt="Admin Logo"
                 className="w-100"
               />
             </a>

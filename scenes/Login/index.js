@@ -38,7 +38,7 @@ const LoginScene = () => {
         setEmailCheck(true);
         setLoading(false);
         if (userType === "comment") {
-          window.location.replace(`https://news.vuukle.com?email=${email}`);
+          window.location.replace(`https://news.admin.com?email=${email}`);
         }
       }
 
@@ -104,7 +104,7 @@ const LoginScene = () => {
                 <a href="/" className="d-inline-block auth-logo large-logo">
                   <img
                     src="/static/images/logo.svg"
-                    alt="Vuukle Logo"
+                    alt="Admin Logo"
                     className="w-100"
                   />
                 </a>

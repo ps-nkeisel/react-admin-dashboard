@@ -6,7 +6,7 @@ const WriteUs = () => {
       Updated Monday to Friday at 6AM PST, if you have any questions,
       <a
         className="text-muted font-weight-bold"
-        href="mailto:billing@vuukle.com"
+        href="mailto:billing@admin.com"
       >
         <u>
           write to us

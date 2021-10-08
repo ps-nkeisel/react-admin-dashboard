@@ -11,7 +11,7 @@ const WordpressInstructions = () => (
           Click on Plugins in the menu on the left, and then click on Add New
           underneath
         </li>
-        <li>Type „Vuukle“ in Search and press Enter on your keyboard</li>
+        <li>Type „Admin“ in Search and press Enter on your keyboard</li>
         <li>Click on Install Now button</li>
         <li>On next screen, click on Activate Now</li>
       </ul>
@@ -20,17 +20,17 @@ const WordpressInstructions = () => (
       Have difficulties? -{" "}
       <a
         className="tx-semibold tx-color-brand"
-        href="mailto:billing@vuukle.com"
+        href="mailto:billing@admin.com"
       >
         <u>write to us</u>
       </a>{" "}
       or check installation guide on{" "}
       <a
-        href="https://docs.vuukle.com/how-to-install-vuukle-on-a-wordpress-blog/"
+        href="https://docs.admin.com/how-to-install-admin-on-a-wordpress-blog/"
         target="_blank"
         className="tx-semibold tx-color-brand"
       >
-        <u>docs.vuukle.com</u>
+        <u>docs.admin.com</u>
       </a>
     </p>
   </>

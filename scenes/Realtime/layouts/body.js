@@ -115,7 +115,7 @@ const RealtimeBody = () => {
           </Pane>
           <a
             className="text-uppercase text-secondary"
-            href={`mailto:support@vuukle.com`}
+            href={`mailto:support@admin.com`}
           >
             <strong>
               <u>Premium Feature</u>

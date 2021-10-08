@@ -89,7 +89,7 @@ const RegisterForm = ({
           />
           <label className="custom-control-label tx-color-05" htmlFor="agree">
             <span className="mr-1">I agree to the </span>
-            <a href="https://docs.vuukle.com/privacy-and-policy/">
+            <a href="https://docs.admin.com/privacy-and-policy/">
               Terms of Service
             </a>
           </label>

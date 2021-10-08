@@ -312,7 +312,7 @@ export function* onSetOffensive(params) {
       } else if (e.message === "already_in_blacklist") {
         msg_description = "This email is blacklisted for " + host;
       } else if (e.message === "in_master_blacklist") {
-        msg_description = "This email can not be whitelisted because they're blocked from using Vuukle globally.";
+        msg_description = "This email can not be whitelisted because they're blocked from using Admin globally.";
       } else {
         msg_description = "Could not whitelist " + offValues;
       }
@@ -324,7 +324,7 @@ export function* onSetOffensive(params) {
       } else if (e.message === "already_in_blacklist") {
         msg_description = "This ip is blacklisted for " + host;
       } else if (e.message === "in_master_blacklist") {
-        msg_description = "This ip can not be whitelisted because they're blocked from using Vuukle globally.";
+        msg_description = "This ip can not be whitelisted because they're blocked from using Admin globally.";
       } else {
         msg_description = "Could not whitelist " + offValues;
       }
@@ -532,7 +532,7 @@ export function* onWhitelistEmail(params) {
       toaster.danger(
         "Error",
         {
-          description: "This user can not be whitelisted because they are blocked from using Vuukle globally.",
+          description: "This user can not be whitelisted because they are blocked from using Admin globally.",
           duration: 5,
           id: "whitelist-email-error"
         }

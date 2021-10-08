@@ -38,7 +38,7 @@ const AddNewSite = ({ shown, setShown }) => {
         <form onSubmit={e => e.preventDefault()}>
           <div className="form-group mb-0">
             <label htmlFor="siteNameInput" className="tx-14 tx-medium tx-spacing-1 mg-b-5 tx-color-03">
-              Add site to Vuukle Admin, e.g. http://mysite.com
+              Add site to Admin Admin, e.g. http://mysite.com
             </label>
             <input
               type="text"

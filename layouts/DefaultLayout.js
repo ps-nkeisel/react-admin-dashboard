@@ -15,7 +15,7 @@ const DefaultLayout = ({ children }) => (
         <a href="/" className="d-inline-block auth-logo large-logo">
           <img
             src="/static/images/logo.svg"
-            alt="Vuukle Logo"
+            alt="Admin Logo"
             className="w-100"
           />
         </a>

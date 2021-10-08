@@ -20,7 +20,7 @@ const PermissionErrorScene = ({ message }) => {
         <div className="paid-block__contact">
           <p>
             If you are interested please contact{" "}
-            <a href="mailto:support@vuukle.com">support@vuukle.com</a>
+            <a href="mailto:support@admin.com">support@admin.com</a>
           </p>
         </div>
       </div>

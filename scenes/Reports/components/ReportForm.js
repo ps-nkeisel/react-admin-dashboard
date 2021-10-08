@@ -64,7 +64,7 @@ const ReportForm = () => {
         timeParams += '&day=' + [1] + '&weekday=' + _.range(1, 8) + '&month=' + _.range(1, 13);
       }
 
-      await addSchedule(token, host, email, schedule, moment(time).unix(), '', timeZone, type, scheduleFor, timeParams, 'http://vuukle.com');
+      await addSchedule(token, host, email, schedule, moment(time).unix(), '', timeZone, type, scheduleFor, timeParams, 'http://admin.com');
 
       toaster.success('A schedule has been added');
 

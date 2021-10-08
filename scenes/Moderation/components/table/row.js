@@ -450,7 +450,7 @@ const TableRow = ( props ) => {
             onClose={() => showReplyModal(false)}/>
 
           <a className="btn btn-sm text-nowrap btn-simple"
-            href={`mailto:?subject="[Vuukle] Comment details"&body=Article: ${rowData.title}%0D%0AArticle URL: https://${rowData.host}/%0D%0AComment: ${stripHtml(rowData.commentText)}%0D%0AAuthor: ${rowData.name}(${rowData.email})%0D%0ATags: ${rowData.tag}`}
+            href={`mailto:?subject="[Admin] Comment details"&body=Article: ${rowData.title}%0D%0AArticle URL: https://${rowData.host}/%0D%0AComment: ${stripHtml(rowData.commentText)}%0D%0AAuthor: ${rowData.name}(${rowData.email})%0D%0ATags: ${rowData.tag}`}
           >
             <FontAwesomeIcon icon={faShare} size="sm" className="mr-1" />
             <span className="d-none d-lg-inline-block">Forward</span>

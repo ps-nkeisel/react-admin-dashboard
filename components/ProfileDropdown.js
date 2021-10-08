@@ -45,7 +45,7 @@ const ProfileDropdown = () => {
       <MenuItem
         icon="lifesaver"
         text="Contact Support"
-        href="mailto:support@vuukle.com"
+        href="mailto:support@admin.com"
       />
       { isUserAdmin &&
         <MenuItem

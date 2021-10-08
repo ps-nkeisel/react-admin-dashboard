@@ -3,7 +3,7 @@ import { actionTypes } from '@/services/actions/session';
 // ==== 🗄️ Reducer
 export const initialState = {
   prevUrl: '/',
-  title: 'Vuukle Dashboard',
+  title: 'Admin Dashboard',
 
   loading: false,
   error: false,

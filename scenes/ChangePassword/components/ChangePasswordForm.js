@@ -16,8 +16,8 @@ const ChangePasswordForm = ({
     <form onSubmit={onSubmit}>
       <p className="tx-color-05 tx-16 mg-b-30 pd-xl-r-60">
         If you are experiencing any problems signing in, email us on{" "}
-        <a className="tx-semibold tx-underline" href="mailto:support@vuukle.com">
-          support@vuukle.com
+        <a className="tx-semibold tx-underline" href="mailto:support@admin.com">
+          support@admin.com
         </a>
         .
       </p>

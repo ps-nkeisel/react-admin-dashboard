@@ -659,7 +659,7 @@ export const updateLoginTypesByApiKey = (token, host, apiKey, loginTypes) =>
 export const setSSOOnlyForPublisher = (token, host) =>
   axios
     .post(
-      process.env.API_BASE_URL + "api/v1/VuukleAdmin/setSSOOnlyForPublisher",
+      process.env.API_BASE_URL + "api/v1/AdminAdmin/setSSOOnlyForPublisher",
       {
         host,
         token
@@ -684,7 +684,7 @@ export const setSSOOnlyForPublisherByApiKey = (token, apiKey) =>
   axios
     .post(
       process.env.API_BASE_URL +
-        "api/v1/VuukleAdmin/setSSOOnlyForPublisherByApiKey",
+        "api/v1/AdminAdmin/setSSOOnlyForPublisherByApiKey",
       {
         apiKey,
         token

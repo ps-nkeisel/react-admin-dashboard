@@ -2,15 +2,15 @@ import React from "react";
 
 const currentYear = new Date().getFullYear();
 const footerLinks = [
-  { title: "Blog", href: "https://blog.vuukle.com" },
-  { title: "Help", href: "https://docs.vuukle.com" },
+  { title: "Blog", href: "https://blog.admin.com" },
+  { title: "Help", href: "https://docs.admin.com" },
   {
     title: "Privacy Policy",
-    href: "https://docs.vuukle.com/privacy-and-policy/",
+    href: "https://docs.admin.com/privacy-and-policy/",
   },
   {
     title: "Terms of Service",
-    href: "https://docs.vuukle.com/privacy-and-policy/",
+    href: "https://docs.admin.com/privacy-and-policy/",
   },
 ];
 
@@ -37,7 +37,7 @@ const Footer = props => (
     </div>
     <div className="d-none d-lg-block">
       <span>
-        &copy; {currentYear} Vuukle {process.env.VERSION}{" "}
+        &copy; {currentYear} Admin {process.env.VERSION}{" "}
       </span>
     </div>
   </footer>

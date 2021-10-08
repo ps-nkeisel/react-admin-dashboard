@@ -10,8 +10,8 @@ import { updateTitle } from '@/services/actions/session';
 const SitesListPage = () => {
   const dispatch = useDispatch();
   const pageTitle = useSelector(({ session }) => session.title);
-  if (pageTitle !== 'Vuukle Dashboard') {
-    dispatch(updateTitle('Vuukle Dashboard'));
+  if (pageTitle !== 'Admin Dashboard') {
+    dispatch(updateTitle('Admin Dashboard'));
   }
 
   return (

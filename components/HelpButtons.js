@@ -9,7 +9,7 @@ import { faBell } from "@fortawesome/pro-solid-svg-icons";
 
 const HelpButtons = () => {
   <>
-    {/* <a target="_blank" href="https://docs.vuukle.com/" className="tx-center mr-1 align-self-center btn-sm btn-sm--square btn-xs btn-ui-05 tx-medium pos-relative">
+    {/* <a target="_blank" href="https://docs.admin.com/" className="tx-center mr-1 align-self-center btn-sm btn-sm--square btn-xs btn-ui-05 tx-medium pos-relative">
       <FontAwesomeIcon
         className="ht-auto fa-w-10"
         icon={faQuestion}

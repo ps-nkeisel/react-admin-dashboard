@@ -93,7 +93,7 @@ const CommentsGeneralSettings = () => {
         </div>
       </div>
       <p className="tx-color-05 tx-16 mg-b-20">
-        Customize some aspects of Vuukle comments widget
+        Customize some aspects of Admin comments widget
       </p>
       <div className="row settings__row">
         <ToTCount

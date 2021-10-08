@@ -822,7 +822,7 @@ export function* whitelistAddSaga(action) {
     } else if (e.message === "already_in_blacklist") {
       errorMessage = "This user is already blacklisted.";
     } else if (e.message === "in_master_blacklist") {
-      errorMessage = "This user can not be whitelisted because they're blocked from using Vuukle globally.";
+      errorMessage = "This user can not be whitelisted because they're blocked from using Admin globally.";
     } else if (e.message === "invalid_user_email") {
       errorMessage = "The email you have provided is invalid";
     } 

@@ -66,9 +66,9 @@ class RealtimePage extends React.Component {
     const testKeys = ['0f8151a9-0f88-4732-8b7e-b5b0e4b1417e', 'bc3e080c-a5bc-4730-b471-3970b6bf699e']
 
     if (testKeys.indexOf(this.props.sessionStore.apiKey) > -1) {
-      this.webSocket = new WebSocket(`wss://s11.vuukle.com:8443`);
+      this.webSocket = new WebSocket(`wss://s11.admin.com:8443`);
     } else {
-      this.webSocket = new WebSocket(`wss://s1.vuukle.com:8443`);
+      this.webSocket = new WebSocket(`wss://s1.admin.com:8443`);
     }
 
     this.intervalId = window.setInterval(() => {

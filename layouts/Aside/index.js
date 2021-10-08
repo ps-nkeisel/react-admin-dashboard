@@ -169,10 +169,10 @@ const Aside = () => {
     <aside className={asideClassName}>
       <div className="aside-header">
         <a href="/" className="aside-logo-mini">
-          <img src="/static/images/logo-small.svg" alt="Vuukle Logo" />
+          <img src="/static/images/logo-small.svg" alt="Admin Logo" />
         </a>
         <a href="/" className="aside-logo">
-          <img src="/static/images/logo.svg" alt="Vuukle Logo" />
+          <img src="/static/images/logo.svg" alt="Admin Logo" />
         </a>
         <a href="" className="aside-menu-link" onClick={handleToggleClick}>
           <Menu />
@@ -192,7 +192,7 @@ const Aside = () => {
           <li className="nav-label mg-t-15">Help</li>
           <li className="nav-item">
             <a
-              href="https://docs.vuukle.com"
+              href="https://docs.admin.com"
               target="_blank"
               className="nav-link"
               rel="nofollow"
@@ -202,7 +202,7 @@ const Aside = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="mailto:support@vuukle.com" className="nav-link">
+            <a href="mailto:support@admin.com" className="nav-link">
               <FontAwesomeIcon icon={faHeadset} />
               <span>Support</span>
             </a>

@@ -19,7 +19,7 @@ const HomeHeader = () => {
       <a href="/" className="small-logo">
         <img
           src="/static/images/logo.svg"
-          alt="Vuukle Logo"
+          alt="Admin Logo"
           className="w-100"
         />
       </a>

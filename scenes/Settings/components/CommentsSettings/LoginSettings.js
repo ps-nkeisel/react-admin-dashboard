@@ -6,8 +6,8 @@ import { Switch } from "@blueprintjs/core";
 const LoginSettings = () => {
   const dispatch = useDispatch();
   const loginTypes = useSelector(({ settingsPage }) => settingsPage.loginTypes);
-  const [vuukleGuest, setVuukleGuest] = useState(false);
-  const [vuuklePassword, setVuuklePassword] = useState(false);
+  const [adminGuest, setAdminGuest] = useState(false);
+  const [adminPassword, setAdminPassword] = useState(false);
   const [googleAuth, setGoogleAuth] = useState(false);
   const [twitterAuth, setTwitterAuth] = useState(false);
   const [disqusAuth, setDisqusAuth] = useState(false);
@@ -27,10 +27,10 @@ const LoginSettings = () => {
       }
 
       if (points >= 32) {
-        setVuukleGuest(true);
+        setAdminGuest(true);
         points -= 32;
       } else {
-        setVuukleGuest(false);
+        setAdminGuest(false);
       }
 
       if (points >= 16) {
@@ -62,21 +62,21 @@ const LoginSettings = () => {
       }
 
       if (points >= 1) {
-        setVuuklePassword(true);
+        setAdminPassword(true);
         points--;
       } else {
-        setVuuklePassword(false);
+        setAdminPassword(false);
       }
     }
   }, [loginTypes]);
 
   const setSSOOnly = () => {
-    setVuukleGuest(false);
+    setAdminGuest(false);
     setDisqusAuth(false);
     setTwitterAuth(false);
     setGoogleAuth(false);
     setFacebookAuth(false);
-    setVuuklePassword(false);
+    setAdminPassword(false);
     setSSO(true);
     dispatch(setLoginToSSO(allSites));
   };
@@ -85,7 +85,7 @@ const LoginSettings = () => {
     const loginTypes = [
       {
         loginType: 1,
-        isAllowed: vuuklePassword
+        isAllowed: adminPassword
       },
       {
         loginType: 2,
@@ -105,7 +105,7 @@ const LoginSettings = () => {
       },
       {
         loginType: 32,
-        isAllowed: vuukleGuest
+        isAllowed: adminGuest
       },
       {
         loginType: 64,
@@ -136,20 +136,20 @@ const LoginSettings = () => {
         </div>
       </div>
       <p className="tx-16 tx-color-05">
-        Enable/Disable auth methods for Vuukle comments widget
+        Enable/Disable auth methods for Admin comments widget
       </p>
       <div className="bg-white pd-t-12 pd-b-2 mg-b-25 rounded-4">
         <Switch
-          id="vuukleGuestAuth"
-          checked={vuukleGuest}
-          onChange={e => setVuukleGuest(e.target.checked)}
-          label="Vuukle Guest"
+          id="adminGuestAuth"
+          checked={adminGuest}
+          onChange={e => setAdminGuest(e.target.checked)}
+          label="Admin Guest"
         />
         <Switch
-          id="vuuklePasswordAuth"
-          checked={vuuklePassword}
-          onChange={e => setVuuklePassword(e.target.checked)}
-          label="Vuukle Password"
+          id="adminPasswordAuth"
+          checked={adminPassword}
+          onChange={e => setAdminPassword(e.target.checked)}
+          label="Admin Password"
         />
         <Switch
           id="googleAuth"
